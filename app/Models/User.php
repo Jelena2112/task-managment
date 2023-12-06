@@ -14,6 +14,12 @@ class User extends Authenticatable
 
     const TABLE = "users";
 
+    const ROLE_USER = "user";
+    const ROLE_ADMINISTRATOR = "administrator";
+    const ROLES = [
+        self::ROLE_USER, self::ROLE_ADMINISTRATOR,
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
