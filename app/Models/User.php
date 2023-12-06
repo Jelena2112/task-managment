@@ -32,6 +32,15 @@ class User extends Authenticatable
         'role',
     ];
 
+    public function setRoleAttribute(string $value): void
+    {
+        if(!in_array($value, self::ROLES)) {
+            throw new \Error("Invalid role. Available roles are: ".implode(',', self::ROLES));
+        }
+
+        $this->attributes['role'] = $value;
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
