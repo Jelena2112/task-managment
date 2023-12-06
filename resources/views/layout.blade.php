@@ -15,6 +15,7 @@
     </head>
 
     <body>
+        @include('partials.navigation')
         @yield('content')
     </body>
 
